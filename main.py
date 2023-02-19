@@ -30,9 +30,8 @@ def find_mismatch(text):
 
 def main():
     text = input()
-    # text = '[({])}'
-    # print(text)
     if "I" in text:
+        text = input()
         mismatch = find_mismatch(text)
         if mismatch == "Success":
             print(mismatch)
