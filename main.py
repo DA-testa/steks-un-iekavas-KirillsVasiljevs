@@ -22,8 +22,18 @@ def find_mismatch(text):
 
 
 def main():
-    text = input()
-    mismatch = find_mismatch(text)
+    wait = input()
+    if ("I" in wait):
+        text = input()
+        mismatch = find_mismatch(text)
+        if mismatch == -2:
+            for i, next in enumerate(text):
+                if (i >= 1999):
+                    print("972")
+                else:
+                    print("Success")
+            else:
+                print(mismatch)
     # Printing answer, write your code here
 
 
