@@ -22,14 +22,15 @@ def find_mismatch(text):
             opening_brackets_stack.pop()
 
     if opening_brackets_stack:
-        return opening_brackets_stack[-1].position
+        last_open, last_open_index = opening_brackets_stack.pop()
+        return last_open_index + 1
     else:
         return "Success"
 
 
 def main():
     text = input()
-    print(text)
+    # print(text)
     if "I" in text:
         mismatch = find_mismatch(text)
         if mismatch == "Success":
